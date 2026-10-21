@@ -1,0 +1,25 @@
+# Mithun Diaries Player
+
+Dark-themed Android music player with Bass, Treble and a multi-band Equalizer.
+Opens with a "Sponsored by Mithun Diaries" screen and a Subscribe button.
+
+## Get the APK without installing anything (GitHub)
+1. Create a new repository on github.com and upload everything in this folder
+   (including the hidden `.github` folder).
+2. Open the repository's **Actions** tab. The "Build APK" workflow runs on every push
+   (or click **Run workflow**).
+3. When it finishes (about 5 minutes), open the run and download
+   **MithunDiariesPlayer-apk** under Artifacts. Unzip it to get `app-debug.apk`.
+4. Copy the APK to your phone, open it, and allow "Install unknown apps" when asked.
+
+## Or build with Android Studio
+Open this folder in Android Studio, wait for Gradle sync, then
+**Build > Build App Bundle(s) / APK(s) > Build APK(s)**.
+Output: `app/build/outputs/apk/debug/app-debug.apk`
+
+## Notes
+- Works on Android 7.0 and newer. Asks for music permission on first launch.
+- Bass Boost on many phones only has an effect with headphones or Bluetooth speakers.
+- Sound settings are saved between launches.
+- Music keeps playing when you press Back; swiping the app away from recents stops it.
+- For the Play Store you'd need a signed release build instead of the debug APK.

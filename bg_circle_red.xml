@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mithun Diaries Player</string>
+    <string name="sponsored_by">Sponsored by</string>
+    <string name="channel_name">Mithun Diaries</string>
+    <string name="support_line">Support us by subscribing to our YouTube channel</string>
+    <string name="channel_handle">youtube.com/@mithundiaries</string>
+    <string name="subscribe">Subscribe on YouTube</string>
+    <string name="subscribe_short">Subscribe</string>
+    <string name="continue_label">Continue to player</string>
+    <string name="continue_in">Continue to player (%1$d)</string>
+    <string name="your_music">Your music</string>
+    <string name="equalizer_show">Equalizer ▾</string>
+    <string name="equalizer_hide">Equalizer ▴</string>
+    <string name="sound_effects">Sound effects</string>
+    <string name="bass">Bass</string>
+    <string name="treble">Treble</string>
+    <string name="preset">Preset</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="custom">Custom</string>
+    <string name="pick_song">Pick a song to start</string>
+    <string name="no_songs">No songs found. Copy music files to your phone and reopen the app.</string>
+    <string name="need_permission">Allow access to music and audio in Settings to see your songs.</string>
+    <string name="cant_play">This file can\'t be played</string>
+    <string name="eq_unavailable">Your phone doesn\'t allow equalizer control for this app.</string>
+    <string name="no_browser">Install YouTube or a browser to open the channel</string>
+    <string name="not_available">N/A</string>
+    <string name="cd_play">Play or pause</string>
+    <string name="cd_prev">Previous song</string>
+    <string name="cd_next">Next song</string>
+    <string name="cd_avatar">Mithun Diaries</string>
+</resources>

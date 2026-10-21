@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette taken from the night-road photo: midnight sky, tail-light red, sodium-lamp amber -->
+    <color name="bg">#070B16</color>
+    <color name="surface">#121A2C</color>
+    <color name="surface_high">#1B2540</color>
+    <color name="track">#2A3552</color>
+    <color name="red">#E8322E</color>
+    <color name="amber">#F2A33A</color>
+    <color name="text">#EDEFF5</color>
+    <color name="text_dim">#8A93A8</color>
+</resources>

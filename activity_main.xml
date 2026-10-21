@@ -1,0 +1,64 @@
+package com.mithundiaries.player
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+class SplashActivity : AppCompatActivity() {
+
+    private val handler = Handler(Looper.getMainLooper())
+    private var secondsLeft = 6
+    private var autoContinue = true
+    private var launched = false
+    private lateinit var btnContinue: TextView
+
+    private val tick = object : Runnable {
+        override fun run() {
+            if (!autoContinue) return
+            if (secondsLeft <= 0) {
+                goToPlayer()
+                return
+            }
+            btnContinue.text = getString(R.string.continue_in, secondsLeft)
+            secondsLeft--
+            handler.postDelayed(this, 1000)
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+
+        findViewById<ImageView>(R.id.splashImage).showCircularSponsorImage()
+
+        btnContinue = findViewById(R.id.btnContinue)
+        btnContinue.setOnClickListener { goToPlayer() }
+
+        findViewById<TextView>(R.id.btnSubscribe).setOnClickListener {
+            // Stop the countdown so the user comes back to this screen after subscribing
+            autoContinue = false
+            handler.removeCallbacks(tick)
+            btnContinue.text = getString(R.string.continue_label)
+            openSubscribeLink()
+        }
+
+        handler.post(tick)
+    }
+
+    private fun goToPlayer() {
+        if (launched) return
+        launched = true
+        handler.removeCallbacks(tick)
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
+    override fun onDestroy() {
+        handler.removeCallbacksAndMessages(null)
+        super.onDestroy()
+    }
+}
